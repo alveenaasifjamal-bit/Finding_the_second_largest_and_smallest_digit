@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let num = +prompt("enter a number and i will tell you the second largest digit in this number")
+    let largest = 0;
+    let second;
+    while(num > 0){
+        let Digit = num % 10
+        if(Digit > largest ){
+          second = largest
+            largest = Digit
+        }
+        if(Digit < largest && Digit > second){
+          second = Digit
+        }
+      num = Math.floor(num / 10)
+    }
+    console.log(largest)
+    console.log(second)
+   </script> 
+</body>
+</html>
